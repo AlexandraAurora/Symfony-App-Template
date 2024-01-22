@@ -1,0 +1,7 @@
+twig:
+    paths:
+        '%kernel.project_dir%/apps/homepage/templates': Homepage
+
+when@test:
+    twig:
+        strict_variables: true

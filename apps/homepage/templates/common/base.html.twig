@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="author" content="Alexandra Aurora Göttlicher" />
+        <meta name="msapplication-TileColor" content="">
+        <meta name="theme-color" content="" />
+        <meta property="og:site_name" content="" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="" />
+        <meta property="og:description" content="" />
+        {% block css %}
+            <link rel="stylesheet" href="{{ asset('css/common/common.css') }}" type="text/css" />
+        {% endblock %}
+        <link rel="canonical" hreflang="en" href="{{ absolute_url(path('homepage_index', {'_locale': 'en'})) }}"/>
+    </head>
+
+    <body>
+        <header>
+            {% block header %}
+            {% endblock %}
+        </header>
+
+        <main>
+            {% block main %}
+            {% endblock %}
+        </main>
+
+        <footer>
+            {% block footer %}
+            {% endblock %}
+        </footer>
+
+        {% block javascript %}
+        {% endblock %}
+    </body>
+</html>

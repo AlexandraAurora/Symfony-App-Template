@@ -1,0 +1,6 @@
+# IndexController
+homepage_index:
+    path: /{_locale}
+    defaults: { _controller: 'App\Homepage\Controller\IndexController::index', _locale: 'en' }
+    requirements:
+        _locale: en
