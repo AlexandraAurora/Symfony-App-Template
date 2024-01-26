@@ -1,14 +1,17 @@
 #!/bin/bash
 
-scriptDir=$(dirname "$0")
-cd "$scriptDir" || exit
+script_dir=$(dirname "$0")
+cd "$script_dir" || exit
 cd ../../
 
+# Update the project.
 git pull
-composer update
 
+# Update the dependencies.
+sudo chown -R "$USER":"$USER" var/
+composer update
+sudo chown -R www-data:www-data var/
+
+# Dump the environment variables for production.
 composer dump-env prod
 composer dump-autoload --no-dev --classmap-authoritative
-
-composer auto-scripts
-sudo chown -R www-data:www-data var/
