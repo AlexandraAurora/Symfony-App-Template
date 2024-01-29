@@ -9,7 +9,7 @@ git pull
 
 # Update the dependencies.
 sudo chown -R "$USER":"$USER" var/
-composer update
+composer update --no-dev
 sudo chown -R www-data:www-data var/
 
 # Dump the environment variables for production.
