@@ -1,6 +1,7 @@
 twig:
     paths:
         '%kernel.project_dir%/apps/homepage/templates': Homepage
+        '%kernel.project_dir%/templates': Shared
 
 when@test:
     twig:
