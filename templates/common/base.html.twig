@@ -7,10 +7,10 @@
         <meta name="author" content="Alexandra Aurora Göttlicher" />
         <meta name="msapplication-TileColor" content="">
         <meta name="theme-color" content="" />
-        <meta property="og:site_name" content="" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="" />
-        <meta property="og:description" content="" />
+        {% block og %}
+            <meta property="og:type" content="website" />
+            <meta property="og:site_name" content="{{ app.request.httpHost }}" />
+        {% endblock %}
         {% block css %}
             <link rel="stylesheet" href="{{ asset('css/common/common.css') }}" type="text/css" />
         {% endblock %}
