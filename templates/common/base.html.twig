@@ -11,6 +11,7 @@
             <meta property="og:type" content="website" />
             <meta property="og:site_name" content="{{ app.request.httpHost }}" />
         {% endblock %}
+        <link rel="preload" href="{{ preload(asset('styles/app.scss'), { as: 'style' }) }}" />
         {% block styles %}
         {% endblock %}
         <link rel="canonical" hreflang="en" href="{{ absolute_url(path('homepage_index', {'_locale': 'en'})) }}"/>
