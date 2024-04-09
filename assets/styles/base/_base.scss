@@ -1,0 +1,19 @@
+@use '../abstracts/colors';
+@use '../base/font-face';
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: colors.$primary-background-color;
+    color: colors.$primary-text-color;
+    font-family: font-face.$fallback-fonts;
+}
+
+li {
+    list-style: none;
+}

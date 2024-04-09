@@ -19,6 +19,7 @@
         "symfony/translation": "7.0.*",
         "symfony/twig-bundle": "7.0.*",
         "symfony/yaml": "7.0.*",
+        "symfonycasts/sass-bundle": "^0.6.0",
         "twig/twig": "^2.12|^3.0"
     },
     "require-dev": {
