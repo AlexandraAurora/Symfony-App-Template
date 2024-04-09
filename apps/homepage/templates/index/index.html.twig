@@ -1,5 +1,14 @@
 {% extends '@Shared/common/base.html.twig' %}
 
+{% block titlePrefix %}App{% endblock %}
+{% block titleSuffix %}Home{% endblock %}
+
+{% block og %}
+    {{ parent() }}
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+{% endblock %}
+
 {% block main %}
-    Hello world!
+    <p>Hello World!</p>
 {% endblock %}
