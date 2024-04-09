@@ -12,7 +12,6 @@
             <meta property="og:site_name" content="{{ app.request.httpHost }}" />
         {% endblock %}
         {% block css %}
-            <link rel="stylesheet" href="{{ asset('css/common/common.css') }}" type="text/css" />
         {% endblock %}
         <link rel="canonical" hreflang="en" href="{{ absolute_url(path('homepage_index', {'_locale': 'en'})) }}"/>
     </head>
@@ -32,6 +31,10 @@
             {% block footer %}
             {% endblock %}
         </footer>
+
+        {% block importmap %}
+            {{ importmap('app') }}
+        {% endblock %}
 
         {% block javascript %}
         {% endblock %}
