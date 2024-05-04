@@ -33,11 +33,10 @@
             {% endblock %}
         </footer>
 
-        {% block importmap %}
-            {{ importmap('app') }}
-        {% endblock %}
-
         {% block javascripts %}
+            {% block importmap %}
+                {{ importmap('app') }}
+            {% endblock %}
         {% endblock %}
     </body>
 </html>
