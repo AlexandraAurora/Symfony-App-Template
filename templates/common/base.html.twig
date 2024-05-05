@@ -14,7 +14,8 @@
         <link rel="preload" href="{{ preload(asset('styles/app.scss'), { as: 'style' }) }}" />
         {% block styles %}
         {% endblock %}
-        <link rel="canonical" hreflang="en" href="{{ absolute_url(path('homepage_index', {'_locale': 'en'})) }}"/>
+        {% block locales %}
+        {% endblock %}
     </head>
 
     <body>

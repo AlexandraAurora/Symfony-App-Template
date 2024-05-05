@@ -9,6 +9,10 @@
     <meta property="og:description" content="" />
 {% endblock %}
 
+{% block locales %}
+    <link rel="canonical" hreflang="en" href="{{ absolute_url(path('homepage_index', {'_locale': 'en'})) }}" />
+{% endblock %}
+
 {% block main %}
     <p>Hello World!</p>
 {% endblock %}
