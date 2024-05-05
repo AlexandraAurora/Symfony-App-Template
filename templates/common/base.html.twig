@@ -4,14 +4,26 @@
         <meta charset="UTF-8">
         <title>{% block titlePrefix %}{% endblock %} | {% block titleSuffix %}{% endblock %}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="author" content="Alexandra Aurora Göttlicher" />
-        <meta name="msapplication-TileColor" content="">
-        <meta name="theme-color" content="" />
+        <meta name="keywords" content="{{ 'shared.meta.keywords'|trans }}" />
+        <meta name="description" content="{{ 'shared.meta.project_slogan'|trans }}" />
+        <meta name="creator" content="{{ 'shared.meta.creator'|trans }}" />
+        <meta name="publisher" content="{{ 'shared.meta.publisher'|trans }}" />
+        <link rel="icon" sizes="16x16" href="{{ asset('images/logo/favicon-16x16.ico') }}" type="image/x-icon" />
+        <link rel="icon" sizes="32x32" href="{{ asset('images/logo/favicon-32x32.ico') }}" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="{{ asset('images/logo/touch-icon-iphone.png') }}" />
+        <link rel="apple-touch-icon" sizes="152x152" href="{{ asset('images/logo/touch-icon-ipad.png') }}" />
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('images/logo/touch-icon-iphone-retina.png') }}" />
+        <link rel="apple-touch-icon" sizes="167x167" href="{{ asset('images/logo/touch-icon-ipad-retina.png') }}" />
         {% block og %}
             <meta property="og:type" content="website" />
             <meta property="og:site_name" content="{{ app.request.httpHost }}" />
+            <meta property="og:image" content="{{ asset('images/logo/logo-full.webp') }}" />
+            <meta property="og:image:alt" content="{{ 'shared.meta.og_image_alt'|trans({'%ProjectName%': 'shared.meta.project_name'|trans}) }}" />
+            <meta name="twitter:card" content="summary" />
+            <meta name="twitter:image" content="{{ asset('images/logo/logo-full.webp') }}" />
+            <meta name="twitter:image:alt" content="{{ 'shared.meta.og_image_alt'|trans({'%ProjectName%': 'shared.meta.project_name'|trans}) }}" />
         {% endblock %}
-        <link rel="preload" href="{{ preload(asset('styles/app.scss'), { as: 'style' }) }}" />
+        <link rel="preload" href="{{ preload(asset('styles/app.scss'), {as: 'style'}) }}" />
         {% block styles %}
         {% endblock %}
         {% block locales %}

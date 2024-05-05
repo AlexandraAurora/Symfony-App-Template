@@ -1,0 +1,14 @@
+# Words wrapped in % are placeholders and will be replaced with actual values.
+# For example: 'Hello %Username%' will be 'Hello vyolit'.
+# You can move placeholders around to suit your needs.
+
+shared:
+    index_title: 'Home'
+    meta:
+        # Ignore these.
+        project_name: 'App'
+        project_slogan: 'My Symfony App Template'
+        keywords: ''
+        creator: 'Alexandra Aurora Göttlicher'
+        publisher: 'Alexandra Aurora Göttlicher'
+        og_image_alt: '%ProjectName% Logo'
