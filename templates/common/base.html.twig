@@ -23,8 +23,8 @@
             <meta name="twitter:image" content="{{ asset('images/logo/logo-full.webp') }}" />
             <meta name="twitter:image:alt" content="{{ 'shared.meta.og_image_alt'|trans({'%ProjectName%': 'shared.meta.project_name'|trans}) }}" />
         {% endblock %}
-        <link rel="preload" href="{{ preload(asset('styles/app.scss'), {as: 'style'}) }}" />
         {% block styles %}
+            <link rel="preload" href="{{ preload(asset('styles/app.scss'), {as: 'style'}) }}" />
         {% endblock %}
         {% block locales %}
         {% endblock %}
