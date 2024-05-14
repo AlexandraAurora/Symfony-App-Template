@@ -1,0 +1,6 @@
+@use '../abstracts/functions';
+
+$breakpoints: (
+    mobile: functions.em(1300),
+    tablet: functions.em(1600)
+);
